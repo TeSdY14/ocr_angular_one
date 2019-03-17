@@ -1,3 +1,4 @@
+<!-- directives par attribut Class -->
 <li [ngClass]="{
               'list-group-item': true,
               'list-group-item-success': postLoveIts >= 1,
@@ -5,13 +6,16 @@
               }" >
   <div>
     <h4 class="mb-1">
+      <!-- Interpolation -->
       {{ postTitle }}
       <span class="pull-right">{{ postCreatedAt | date: 'short' }}</span>
     </h4>
   </div>
   <p>
+    <!-- Interpolation -->
     {{ postContent }}
   </p>
+  <!-- (Event Binding) -->
   <button class="btn btn-success"
           (click)='onJaime(1)'>J'aime</button>
   <button class="btn btn-danger"
